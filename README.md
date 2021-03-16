@@ -56,8 +56,8 @@ You will also need to install `faraday` or `letter_opener` if you use the `postb
 ```yaml
 ---
 :health_check:
-  - :address: "127.0.0.1"
-    :port: 8080
+  :address: "127.0.0.1"
+  :port: 8080
 :mailboxes:
   -
     :email: "user1@gmail.com"

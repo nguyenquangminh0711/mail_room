@@ -19,10 +19,6 @@ services:
     - gem install bundler  --no-document    # Bundler is not installed with the image
     - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
 
-rspec-2.5:
-  image: "ruby:2.5"
-  <<: *test
-
 rspec-2.6:
   image: "ruby:2.6"
   <<: *test

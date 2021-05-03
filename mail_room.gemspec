@@ -22,12 +22,16 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "rspec", "~> 3.9"
+  gem.add_development_dependency "rubocop", "~> 1.11"
   gem.add_development_dependency "mocha", "~> 1.11"
   gem.add_development_dependency "simplecov"
   gem.add_development_dependency "webrick", "~> 1.6"
 
   # for testing delivery methods
   gem.add_development_dependency "faraday"
+  # Ruby v3.0.0 made net-http a default gem. This dependency is needed to eliminate
+  # warnings when faraday is used. See https://github.com/lostisland/faraday-net_http/pull/5.
+  gem.add_development_dependency "net-http", "~> 0.1"
   gem.add_development_dependency "mail"
   gem.add_development_dependency "letter_opener"
   gem.add_development_dependency "redis", "~> 3.3.1"
